@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Product Pack',
-    'version': '8.0.1.2.2',
+    'version': '8.0.1.2.3',
     'category': 'Product',
     'sequence': 14,
     'summary': '',
@@ -42,6 +42,7 @@ Withilist:
         'security/ir.model.access.csv',
         'views/pack_view.xml',
         'views/sale_view.xml',
+        'views/product_view.xml',
     ],
     'demo': [
         'demo/demo_data.xml',

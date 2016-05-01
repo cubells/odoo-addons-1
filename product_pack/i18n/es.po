@@ -1,68 +1,121 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * product_pack
-# 
-# Translators:
-# Albert Cervera i Areny <albert@nan-tic.com>, 2009
+#	* product_pack
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: odoo-addons (8.0)\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 23:57+0000\n"
-"PO-Revision-Date: 2015-09-10 00:00+0000\n"
-"Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/es/)\n"
+"POT-Creation-Date: 2016-05-01 11:46+0000\n"
+"PO-Revision-Date: 2016-05-01 11:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: product_pack
+#: help:product.product,pack_price_type:0
 #: help:product.template,pack_price_type:0
-msgid ""
-"\n"
-"        * Totalice Price: Sum individual prices on the product pack price.\n"
-"        * Fixed Price: Price of this product instead of components prrices.\n"
-"        * Components Price: Components prices plast pack price.\n"
+#: help:sale.order.line,pack_type:0
+msgid "\n"
+"        * Detailed - Components Prices: Detail lines with prices on sales order.\n"
+"        * Detailed - Totaliced Price: Detail lines on sales order totalicing lines prices on pack (don't show component prices).\n"
+"        * Detailed - Fixed Price: Detail lines on sales order and use product pack price (ignore line prices).\n"
+"        * None Detailed - Assisted Price: Do not detail lines on sales order. Assist to get pack price using pack lines.\n"
 "        "
-msgstr ""
+msgstr "\n"
+"        * Detallado - Precios de los componentes: lineas de detalle con precio en los pedidos.\n"
+"        * Detallado - Precio totalizado: lineas de detalle en los pedidos totalizando los precios del pack (no se muestra el precio de los componentes).\n"
+"        * Detallado - Precio fijo: lineas de detalle en los pedidos y se usa el precio del pack (se ignora el precio de las lineas).\n"
+"        * Sin detalle - Precio asistido: no se detallan las lineas en los pedidos. Se ayuda para conseguir el precio usando las lineas del pack.\n"
+"        "
 
 #. module: product_pack
-#: selection:product.template,pack_price_type:0
-msgid "Components Prices"
-msgstr ""
+#: code:addons/product_pack/models/product.py:145
+#, python-format
+msgid "A \"None Detailed - Assisted Price Pack\" can not have a pack as a child!"
+msgstr "Un pack con precio asistido y sin detalle, no puede tener un pack como hijo!"
+
+#. module: product_pack
+#: view:sale.order.line:product_pack.view_order_line_form2
+msgid "Cancel"
+msgstr "Cancelar"
 
 #. module: product_pack
 #: field:product.pack.line,create_uid:0
 #: field:sale.order.line.pack.line,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: product_pack
 #: field:product.pack.line,create_date:0
 #: field:sale.order.line.pack.line,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Creado el"
 
 #. module: product_pack
-#: field:sale.order.line,pack_depth:0
-msgid "Depth"
-msgstr "Profundidad"
-
-#. module: product_pack
-#: help:sale.order.line,pack_depth:0
-msgid "Depth of the product if it is part of a pack."
-msgstr "Profundidad del producto si forma parte de un pack."
+#: view:sale.order:product_pack.view_order_stock_form
+msgid "Detail"
+msgstr "Detalle"
 
 #. module: product_pack
 #: selection:product.template,pack_price_type:0
-msgid "Fixed Price"
-msgstr ""
+msgid "Detailed - Components Prices"
+msgstr "Detallado - Precios de los componentes"
 
 #. module: product_pack
-#: field:product.pack.line,id:0 field:sale.order.line.pack.line,id:0
+#: selection:product.template,pack_price_type:0
+msgid "Detailed - Fixed Price"
+msgstr "Detallado - Precio fijo"
+
+#. module: product_pack
+#: selection:product.template,pack_price_type:0
+msgid "Detailed - Totaliced Price"
+msgstr "Detallado - Precio totalizado"
+
+#. module: product_pack
+#: code:addons/product_pack/models/sale_order_line.py:75
+#, python-format
+msgid "Details"
+msgstr "Detalles"
+
+#. module: product_pack
+#: field:product.pack.line,display_name:0
+#: field:sale.order.line.pack.line,display_name:0
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: product_pack
+#: code:addons/product_pack/models/product.py:98
+#, python-format
+msgid "Error! You cannot create recursive packs.\n"
+"Product id: %s"
+msgstr "Error! No se pueden crear packs recursivos.\n"
+"Product id: %s"
+
+#. module: product_pack
+#: field:product.pack.line,id:0
+#: field:sale.order.line.pack.line,id:0
 msgid "ID"
+msgstr "Id"
+
+#. module: product_pack
+#: help:product.product,pack:0
+#: help:product.template,pack:0
+msgid "Is a Product Pack?"
+msgstr "Es un pack?"
+
+#. module: product_pack
+#: view:product.template:product_pack.product_template_pack_search_view
+msgid "Pack"
+msgstr "Pack"
+
+#. module: product_pack
+#: field:product.pack.line,__last_update:0
+#: field:sale.order.line.pack.line,__last_update:0
+msgid "Last Modified on"
 msgstr ""
 
 #. module: product_pack
@@ -78,131 +131,152 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: product_pack
-#: field:sale.order.line,pack_child_line_ids:0
-msgid "Lines in pack"
-msgstr "Líneas en el pack"
-
-#. module: product_pack
-#: help:product.product,pack_line_ids:0
 #: help:product.product,used_pack_line_ids:0
-msgid "List of products that are part of this pack."
-msgstr "Lista de productos que forman parte del pack."
+#: help:product.template,used_pack_line_ids:0
+msgid "List of packs where product is used."
+msgstr "Listado de packs donde se usa el producto."
 
 #. module: product_pack
-#: model:res.groups,name:product_pack.group_pack
-msgid "Manage Packs On Sales Orders"
-msgstr ""
+#: help:product.template,pack_line_ids:0
+msgid "List of products that are part of this pack."
+msgstr "Listado de productos que son parte de este pack."
+
+#. module: product_pack
+#: selection:product.template,pack_price_type:0
+msgid "None Detailed - Assisted Price"
+msgstr "Sin detalle - Precio asistido"
+
+#. module: product_pack
+#: selection:product.template,pack_price_type:0
+msgid "None Detailed - Totaliced Price"
+msgstr "Sin detalle - Precio totalizado"
+
+#. module: product_pack
+#: field:product.product,used_pack_line_ids:0
+#: field:product.template,used_pack_line_ids:0
+msgid "On Packs"
+msgstr "En packs"
 
 #. module: product_pack
 #: field:sale.order.line.pack.line,order_line_id:0
 msgid "Order Line"
-msgstr ""
+msgstr "Linea de pedido"
 
 #. module: product_pack
 #: view:product.product:product_pack.nan_product_pack_form
-#: field:sale.order.line,pack_parent_line_id:0
+#: view:product.template:product_pack.product_template_only_form_view
 msgid "Pack"
 msgstr "Pack"
 
 #. module: product_pack
 #: field:sale.order.line,pack_line_ids:0
 msgid "Pack Lines"
-msgstr ""
-
-#. module: product_pack
-#: field:product.template,pack_price_type:0
-msgid "Pack Price Type"
-msgstr ""
+msgstr "Lineas del pack"
 
 #. module: product_pack
 #: view:product.pack.line:product_pack.product_pack_line_form
 msgid "Pack Product Line"
-msgstr "Línea de pack de productos"
+msgstr "Linea de producto pack"
 
 #. module: product_pack
 #: view:product.pack.line:product_pack.product_pack_line_tree
 msgid "Pack Product Lines"
-msgstr "Líneas del pack de productos"
+msgstr "Lineas de producto pack"
 
 #. module: product_pack
-#: field:product.product,pack_line_ids:0
-#: field:product.product,used_pack_line_ids:0
+#: field:product.template,pack_line_ids:0
 msgid "Pack Products"
-msgstr "Productos del pack"
+msgstr "Productos pack"
 
 #. module: product_pack
-#: code:addons/product_pack/pack.py:159 code:addons/product_pack/pack.py:164
+#: field:product.product,pack_price_type:0
+#: field:product.template,pack_price_type:0
+#: field:sale.order.line,pack_type:0
+msgid "Pack Type"
+msgstr "Tipo de pack"
+
+#. module: product_pack
+#: code:addons/product_pack/models/product.py:173
+#: code:addons/product_pack/models/product.py:178
 #, python-format
-msgid ""
-"Pack lines products company must be the same as the                    "
-"parent product company"
-msgstr ""
+msgid "Pack lines products company must be the same as the                    parent product company"
+msgstr "Las lineas de producto pack de la compañía han de ser las mismas que las de la compañía padre"
 
 #. module: product_pack
+#: field:sale.order.line,pack_total:0
+msgid "Pack total"
+msgstr "Total del pack"
+
+#. module: product_pack
+#: field:product.product,pack:0
 #: field:product.template,pack:0
 msgid "Pack?"
-msgstr ""
-
-#. module: product_pack
-#: field:product.pack.line,parent_product_id:0
-msgid "Parent Product"
-msgstr "Producto padre"
+msgstr "Es un pack?"
 
 #. module: product_pack
 #: model:ir.model,name:product_pack.model_product_product
-#: field:product.pack.line,product_id:0
 #: field:sale.order.line.pack.line,product_id:0
 msgid "Product"
 msgstr "Producto"
 
 #. module: product_pack
-#: model:ir.model,name:product_pack.model_product_template
-msgid "Product Template"
-msgstr ""
+#: model:ir.actions.act_window,name:product_pack.product_pack_action
+#: model:ir.ui.menu,name:product_pack.menu_product_pack_action
+msgid "Product Packs"
+msgstr "Productos pack"
 
 #. module: product_pack
-#: field:product.pack.line,quantity:0
+#: model:ir.model,name:product_pack.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: product_pack
 #: field:sale.order.line.pack.line,product_uom_qty:0
 msgid "Quantity"
 msgstr "Cantidad"
 
 #. module: product_pack
-#: field:product.template,sale_order_pack:0
-msgid "Sale Order Pack"
-msgstr ""
-
-#. module: product_pack
-#: help:product.template,sale_order_pack:0
-msgid ""
-"Sale order are packs used on sale orders to calculate a price of a line"
-msgstr ""
+#: model:ir.model,name:product_pack.model_sale_order_line_pack_line
+msgid "Sale Order None Detailed Pack Lines"
+msgstr "Lineas sin detalle de los pedidos"
 
 #. module: product_pack
 #: model:ir.model,name:product_pack.model_sale_order
 msgid "Sales Order"
-msgstr ""
+msgstr "Pedido"
 
 #. module: product_pack
 #: model:ir.model,name:product_pack.model_sale_order_line
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Linea de pedido"
 
 #. module: product_pack
 #: view:sale.order.line.pack.line:product_pack.view_sale_line_pack_line_tree
 msgid "Sales Order Line Pack Lines"
-msgstr ""
+msgstr "Lineas de pack de pedidos"
 
 #. module: product_pack
-#: help:product.template,pack:0
-msgid "TODO"
-msgstr ""
+#: view:sale.order.line:product_pack.view_order_line_form2
+msgid "Sales Order Lines"
+msgstr "Lineas de pedidos"
 
 #. module: product_pack
-#: help:sale.order.line,pack_parent_line_id:0
-msgid "The pack that contains this product."
-msgstr "El pack que contiene este producto."
+#: view:sale.order.line:product_pack.view_order_line_form2
+msgid "Save"
+msgstr "Guardar"
+
+#. module: product_pack
+#: field:sale.order.line.pack.line,price_subtotal:0
+msgid "Subtotal"
+msgstr "Subotal"
 
 #. module: product_pack
 #: field:sale.order.line.pack.line,price_unit:0
 msgid "Unit Price"
-msgstr ""
+msgstr "Precio por unidad"
+
+#. module: product_pack
+#: view:sale.order.line:product_pack.view_order_line_form2
+msgid "or"
+msgstr "o"
+
